@@ -3,7 +3,7 @@
 import { makeEmptyList, isEmptyList, cons, car, cdr } from '../src/list';
 
 describe('list operations', () => {
-  test('should create empty list', () => {
+  test('should create an empty list', () => {
     const emptyList = makeEmptyList();
     expect(isEmptyList(emptyList)).toBe(true);
   });

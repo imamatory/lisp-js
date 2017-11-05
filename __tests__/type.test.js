@@ -1,11 +1,11 @@
 // @flow
 
 import { makeEmptyList } from '../src/list';
-import { getType } from '../src/type';
+import { getType, Types as T } from '../src/type';
 
 test('should return proper type', () => {
   const l = makeEmptyList();
-  expect(getType(l)).toEqual('list');
-  expect(getType('string type')).toEqual('string');
-  expect(getType(123)).toEqual('number');
+  expect(getType(l)).toEqual(T.List);
+  expect(getType('string type')).toEqual(T.String);
+  expect(getType(123)).toEqual(T.Number);
 });

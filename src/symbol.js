@@ -1,7 +1,9 @@
 // @flow
 
+import { getType, Types as T } from './type';
+
 export const makeSymbol = (value: string) => ({
-  type: 'symbol',
+  type: T.Symbol,
   value,
 });
 

@@ -3,7 +3,7 @@
 import _ from 'lodash';
 import { car, cdr, isEmptyList } from './list';
 import { getValue } from './symbol';
-import { getType } from './type';
+import { getType, Types as T } from './type';
 
 const inspect = (data) => {
   const inspectList = (l) => {
@@ -20,11 +20,11 @@ const inspect = (data) => {
   const type = getType(data);
 
   switch (type) {
-    case 'list':
+    case T.List:
       return isEmptyList(data) ? '' : inspectList(data);
-    case 'symbol': return getValue(data);
-    case 'number': return data;
-    case 'string': return `"${data}"`;
+    case T.Symbol: return getValue(data);
+    case T.Number: return data;
+    case T.String: return `"${data}"`;
     default: return data;
   }
 };

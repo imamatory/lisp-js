@@ -16,6 +16,9 @@ build:
 test:
 	yarn test
 
+test-watch:
+	yarn run test-watch
+
 check-types:
 	yarn run flow
 
